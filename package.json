@@ -1,0 +1,28 @@
+{
+	"name": "random",
+	"version": "1.0.0",
+	"description": "Simple library for randomization.",
+	"homepage": "https://seedling.refugesystems.net/web-dev/Random",
+	"author": "aetherwalker@refugesystems.net",
+	"license": "GPL-3.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "grunt test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@seedling.refugesystems.net:web-dev/Random.git"
+	},
+	"keywords": [
+		"project",
+		"tracking",
+		"systems",
+		"graphs"
+	],
+	"bugs": {
+		"url": "https://seedling.refugesystems.net/web-dev/Random/issues"
+	},
+	"dependencies": {},
+	"devDependencies": {},
+	"aconfiguration": {}
+}
