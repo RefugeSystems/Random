@@ -1065,11 +1065,10 @@ random.integer = function(range, min) {
  */
 random.string = function(len) {
 	if(len) {
-		var string = alphanumeric[this.integer(alphanumeric.length)];
-		while(string.length < len) {
-			string += alphanumeric[this.integer(alphanumeric.length)];
-		}
-		return string;
+		var x, string = [];
+		for(x=0; x<len; x++)
+			string[x] = alphanumeric[this.integer(alphanumeric.length)];
+		return string.join();
 	} else {
 		return null;
 	}

@@ -57,3 +57,7 @@ typings/
 .next
 
 .project
+*.rar
+*.exe
+
+*scratch.js
