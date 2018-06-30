@@ -1102,13 +1102,17 @@ random.prime = function() {
  * 
  */
 random.identifier = function(prefix, pre, length) {
-	prefix = prefix || "id";
-	pre = pre || 10;
+	if(prefix === undefined) {
+		prefix = "id";
+	}
+	if(pre === undefined) {
+		pre = 10;
+	}
 	
-	var id = prefix + ":" + random.string(pre) + Date.now();
+	var id = random.string(pre) + Date.now();
 	if(length) {
 		id += random.string(length - id.length);
 	}
 	
-	return id;
+	return prefix + ":" + id;
 };

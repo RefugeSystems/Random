@@ -61,4 +61,50 @@ describe("Random data generation", function() {
 			}
 		});
 	});
+	
+	describe("of identifiers", function() {
+		it("generates a basic ID following defaults", function() {
+			var x, result;
+			var pattern = /^id:[a-zA-Z0-9]+[0-9]{10,20}$/;
+			
+			for(x=0; x<1000; x++) {
+				result = Random.identifier();
+				expect(result.length).toBe(26);
+				expect(pattern.test(result)).toBe(true);
+			}
+		});
+		
+		it("generates with a custom prefix", function() {
+			var x, result;
+			var pattern = /^prefix:[a-zA-Z0-9]+[0-9]{10,20}$/;
+
+			for(x=0; x<1000; x++) {
+				result = Random.identifier("prefix");
+				expect(result.length).toBe(30);
+				expect(pattern.test(result)).toBe(true);
+			}
+		});
+		
+		it("generates with a set pre-generated length", function() {
+			var x, result;
+			var pattern = /^prefix:[a-zA-Z0-9]{10}[0-9]{10,20}$/;
+
+			for(x=0; x<1000; x++) {
+				result = Random.identifier("prefix", 10);
+				expect(result.length).toBe(30);
+				expect(pattern.test(result)).toBe(true);
+			}
+		});
+		
+		it("generates with a set total length", function() {
+			var x, result;
+			var pattern = /^prefix:[a-zA-Z0-9]{10}[0-9]{10,20}[a-zA-Z0-9]+$/;
+
+			for(x=0; x<1000; x++) {
+				result = Random.identifier("prefix", 10, 32);
+				expect(result.length).toBe(39);
+				expect(pattern.test(result)).toBe(true);
+			}
+		});
+	});
 });

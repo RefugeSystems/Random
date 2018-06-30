@@ -2,7 +2,7 @@
     "project": {
         "name": "rs-random",
         "description": "Small and simple wrapper for random functionality using the native Math library.",
-        "version": "1.0.0",
+        "version": "1.0.3",
         "url": "https://github.com/RefugeSystems/Random"
     },
     "files": {

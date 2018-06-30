@@ -17,7 +17,7 @@
                 <h1><img src="../assets/css/logo.png" title="rs-random" width="117" height="52"></h1>
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 1.0.0</em>
+            <em>API Docs for: 1.0.3</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -1184,15 +1184,19 @@ random.prime = function() {
  * 
  */
 random.identifier = function(prefix, pre, length) {
-	prefix = prefix || &quot;id&quot;;
-	pre = pre || 10;
+	if(prefix === undefined) {
+		prefix = &quot;id&quot;;
+	}
+	if(pre === undefined) {
+		pre = 10;
+	}
 	
-	var id = prefix + &quot;:&quot; + random.string(pre) + Date.now();
+	var id = random.string(pre) + Date.now();
 	if(length) {
 		id += random.string(length - id.length);
 	}
 	
-	return id;
+	return prefix + &quot;:&quot; + id;
 };
 
     </pre>
