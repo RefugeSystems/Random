@@ -1,6 +1,6 @@
 {
 	"name": "rs-random",
-	"version": "1.0.4",
+	"version": "1.0.41",
 	"description": "Small and simple wrapper for random functionality using the native Math library.",
 	"homepage": "https://github.com/RefugeSystems/Random",
 	"author": "aetherwalker@refugesystems.net",
@@ -14,10 +14,7 @@
 		"url": "git@github.com:RefugeSystems/Random.git"
 	},
 	"keywords": [
-		"project",
-		"tracking",
-		"systems",
-		"graphs"
+		"randomization"
 	],
 	"bugs": {
 		"url": "https://github.com/RefugeSystems/Random/issues"
