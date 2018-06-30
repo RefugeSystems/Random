@@ -1,4 +1,86 @@
-"use strict";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>index.js - rs-random</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="rs-random" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Random.html">Random</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: index.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&quot;use strict&quot;;
 
 /**
  * Provides a suite of functions for generating random data.
@@ -14,7 +96,7 @@ var random = module.exports;
  * @property alphanumeric
  * @type String[]
  */
-var alphanumeric = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var alphanumeric = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;];
 
 /**
  * 
@@ -1025,11 +1107,11 @@ var primes = [
 	3688284643];
 
 /**
- * Method for getting a random floating point number x | min <= x < min + range
+ * Method for getting a random floating point number x | min &lt;= x &lt; min + range
  * As an example, random(5) will yield a number between 0 and 5 where as
  * random(5,5) will yield a number between 5 and 10.
  * @method number
- * @param {Number} range The "width" of the range of numbers desired.
+ * @param {Number} range The &quot;width&quot; of the range of numbers desired.
  * @param {Number} min The minimum number desired.
  * @return {Number} A random number.
  */
@@ -1041,11 +1123,11 @@ random.number = function(range, min) {
 };
 
 /**
- * Method for getting a random integer x | min <= x < min + range
+ * Method for getting a random integer x | min &lt;= x &lt; min + range
  * As an example, random(5) will yield a number between 0 and 4 where as
  * random(5,5) will yield a number between 5 and 9.
  * @method integer
- * @param {Number} range The "width" of the range of numbers desired.
+ * @param {Number} range The &quot;width&quot; of the range of numbers desired.
  * @param {Number} min The minimum number desired.
  * @return {Number} A random number.
  */
@@ -1065,9 +1147,9 @@ random.integer = function(range, min) {
 random.string = function(len) {
 	if(len) {
 		var x, string = [];
-		for(x=0; x<len; x++)
+		for(x=0; x&lt;len; x++)
 			string[x] = alphanumeric[this.integer(alphanumeric.length)];
-		return string.join("");
+		return string.join(&quot;&quot;);
 	} else {
 		return null;
 	}
@@ -1089,12 +1171,12 @@ random.prime = function() {
  * [prefix] : [string.length = pre] [Timestamp] [length? string.len = remaining]
  * 
  * Example:  
- * Random.identified('example', 2, 3)  
- *  > "example:Ha1527351401496iUo"
+ * Random.identified(&#x27;example&#x27;, 2, 3)  
+ *  &gt; &quot;example:Ha1527351401496iUo&quot;
  * 
  * @method identified
- * @param {String} prefix The string to prefix the identifier with before the colon (':').
- * 		Defaults to 'id'.
+ * @param {String} prefix The string to prefix the identifier with before the colon (&#x27;:&#x27;).
+ * 		Defaults to &#x27;id&#x27;.
  * @param {Number} pre Length of the randomly generate string before the timestamp.
  * 		Defaults to 10.
  * @param {Number} length The total desired length of the randomized section of the identifier.
@@ -1102,13 +1184,32 @@ random.prime = function() {
  * 
  */
 random.identifier = function(prefix, pre, length) {
-	prefix = prefix || "id";
+	prefix = prefix || &quot;id&quot;;
 	pre = pre || 10;
 	
-	var id = prefix + ":" + random.string(pre) + Date.now();
+	var id = prefix + &quot;:&quot; + random.string(pre) + Date.now();
 	if(length) {
 		id += random.string(length - id.length);
 	}
 	
 	return id;
 };
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+{
+    "project": {
+        "name": "rs-random",
+        "description": "Small and simple wrapper for random functionality using the native Math library.",
+        "version": "1.0.0",
+        "url": "https://github.com/RefugeSystems/Random"
+    },
+    "files": {
+        "index.js": {
+            "name": "index.js",
+            "modules": {},
+            "classes": {
+                "Random": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Random": {
+            "name": "Random",
+            "shortname": "Random",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "index.js",
+            "line": 3,
+            "description": "Provides a suite of functions for generating random data.",
+            "is_constructor": 1,
+            "static": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "index.js",
+            "line": 11,
+            "description": "Quick reference array for generating random strings",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "property",
+            "name": "alphanumeric",
+            "type": "String[]",
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 19,
+            "type": "Number[]",
+            "itemtype": "property",
+            "name": "primes",
+            "access": "private",
+            "tagname": "",
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 1027,
+            "description": "Method for getting a random floating point number x | min <= x < min + range\nAs an example, random(5) will yield a number between 0 and 5 where as\nrandom(5,5) will yield a number between 5 and 10.",
+            "itemtype": "method",
+            "name": "number",
+            "params": [
+                {
+                    "name": "range",
+                    "description": "The \"width\" of the range of numbers desired.",
+                    "type": "Number"
+                },
+                {
+                    "name": "min",
+                    "description": "The minimum number desired.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "A random number.",
+                "type": "Number"
+            },
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 1043,
+            "description": "Method for getting a random integer x | min <= x < min + range\nAs an example, random(5) will yield a number between 0 and 4 where as\nrandom(5,5) will yield a number between 5 and 9.",
+            "itemtype": "method",
+            "name": "integer",
+            "params": [
+                {
+                    "name": "range",
+                    "description": "The \"width\" of the range of numbers desired.",
+                    "type": "Number"
+                },
+                {
+                    "name": "min",
+                    "description": "The minimum number desired.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "A random number.",
+                "type": "Number"
+            },
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 1059,
+            "description": "Get a random alphanumeric string (ie. matches pattern ^[a-zA-Z0-9]*$).",
+            "itemtype": "method",
+            "name": "string",
+            "params": [
+                {
+                    "name": "len",
+                    "description": "The desired length for the returned String.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "A random alphanumeric string",
+                "type": "String"
+            },
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 1076,
+            "description": "Returns a prime number from a pre-generated list.\n\nThis should not be considered for security generation purposes.",
+            "itemtype": "method",
+            "name": "prime",
+            "return": {
+                "description": "A random prime number.",
+                "type": "Number"
+            },
+            "class": "Random"
+        },
+        {
+            "file": "index.js",
+            "line": 1087,
+            "description": "Create a unique identifier following a pattern;\n[prefix] : [string.length = pre] [Timestamp] [length? string.len = remaining]\n\nExample:  \nRandom.identified('example', 2, 3)  \n > \"example:Ha1527351401496iUo\"",
+            "itemtype": "method",
+            "name": "identified",
+            "params": [
+                {
+                    "name": "prefix",
+                    "description": "The string to prefix the identifier with before the colon (':').\n\t\tDefaults to 'id'.",
+                    "type": "String"
+                },
+                {
+                    "name": "pre",
+                    "description": "Length of the randomly generate string before the timestamp.\n\t\tDefaults to 10.",
+                    "type": "Number"
+                },
+                {
+                    "name": "length",
+                    "description": "The total desired length of the randomized section of the identifier.\n\t\tFills in after the time stamp if additional length is needed.",
+                    "type": "Number"
+                }
+            ],
+            "class": "Random"
+        }
+    ],
+    "warnings": []
+}

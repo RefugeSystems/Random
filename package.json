@@ -1,7 +1,7 @@
 {
 	"name": "rs-random",
 	"version": "1.0.0",
-	"description": "Simple library for randomization.",
+	"description": "Small and simple wrapper for random functionality using the native Math library.",
 	"homepage": "https://github.com/RefugeSystems/Random",
 	"author": "aetherwalker@refugesystems.net",
 	"license": "GPL-3.0",
@@ -22,7 +22,15 @@
 	"bugs": {
 		"url": "https://github.com/RefugeSystems/Random/issues"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"grunt": "^1.0.3",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-contrib-yuidoc": "^1.0.0",
+		"gruntify-eslint": "^5.0.0",
+		"jasmine": "^3.1.0",
+		"jasmine-console-reporter": "^3.0.2",
+		"load-grunt-tasks": "^4.0.0"
+	},
 	"devDependencies": {},
 	"aconfiguration": {}
 }
