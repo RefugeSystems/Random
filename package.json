@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:RefugeSystems/Random.git"
+		"url": "git+ssh://git@github.com/RefugeSystems/Random.git"
 	},
 	"keywords": [
 		"randomization"
@@ -19,8 +19,7 @@
 	"bugs": {
 		"url": "https://github.com/RefugeSystems/Random/issues"
 	},
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"grunt": "^1.0.3",
 		"grunt-contrib-watch": "^1.1.0",
