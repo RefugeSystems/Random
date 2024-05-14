@@ -1074,6 +1074,24 @@ random.string = function(len) {
 };
 
 /**
+ * Get a normal distribution of random numbers between 2 values.
+ * @see https://stackoverflow.com/questions/25582882/javascript-math-random-normal-distribution-gaussian-bell-curve
+ * @method guassian
+ * @param {Number} [mean] Optional, defaults to 0.
+ * @param {Number} [stdev] Optional, detaults to 1.
+ * @param {Number} [skew] Optional skew of the curve, defaults to 1. Higher numbers front load the curve, fractions back load the curve.
+ * 		Negative numbers are not valid here.
+ */
+random.guassian = function(min = 0, max = 1, skew = 1) {
+	if(skew <= 0) {
+		return 0;
+	}
+	
+	var num = Math.sqrt(-2 * Math.log(1 - Math.random())) * Math.cos(2 * Math.PI * Math.random());
+	return Math.pow(num/10 + .5, skew) * (max - min) + min;
+};
+
+/**
  * Returns a prime number from a pre-generated list.
  * 
  * This should not be considered for security generation purposes.
